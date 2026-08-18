@@ -1,0 +1,288 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+
+
+h2[mat-dialog-title] {
+  height: 57px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 0;
+  padding: 0 20px;
+
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #374151;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.cerrar {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+  margin: 0;
+
+  border: none;
+  background: transparent;
+
+  color: #64748b;
+  cursor: pointer;
+}
+
+.cerrar mat-icon {
+  font-size: 21px;
+  width: 21px;
+  height: 21px;
+}
+
+.cerrar:hover {
+  color: #334155;
+}
+
+
+
+mat-dialog-content {
+  box-sizing: border-box;
+
+  padding: 24px 29px 20px !important;
+  margin: 0 !important;
+
+  max-height: none !important;
+  overflow: visible !important;
+
+  font-family: Roboto, Arial, sans-serif;
+}
+
+
+
+.fila {
+  display: flex;
+  gap: 24px;
+
+  width: 100%;
+  margin: 0 0 16px;
+}
+
+.fila:last-child {
+  margin-bottom: 0;
+}
+
+
+
+.campo {
+  flex: 1;
+  min-width: 0;
+}
+
+.campo label {
+  display: block;
+
+  margin: 0 0 7px;
+
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+
+  color: #475569;
+}
+
+
+
+.campo mat-form-field {
+  display: block;
+  width: 100%;
+
+  margin: 0;
+}
+
+
+::ng-deep .campo .mat-mdc-form-field {
+  height: 36px;
+}
+
+::ng-deep .campo .mat-mdc-text-field-wrapper {
+  height: 36px !important;
+
+  background: #ffffff;
+}
+
+::ng-deep .campo .mat-mdc-form-field-flex {
+  height: 36px !important;
+  align-items: center;
+}
+
+
+
+::ng-deep .campo input.mat-mdc-input-element {
+  height: 34px !important;
+
+  padding: 0 12px !important;
+
+  box-sizing: border-box;
+
+  font-size: 13px;
+  color: #334155;
+}
+
+
+
+::ng-deep .campo .mat-mdc-select {
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+
+  font-size: 13px;
+  color: #64748b;
+}
+
+::ng-deep .campo .mat-mdc-select-value {
+  padding-left: 12px;
+}
+
+::ng-deep .campo .mat-mdc-select-placeholder {
+  color: #94a3b8;
+}
+
+::ng-deep .campo .mat-mdc-select-arrow-wrapper {
+  padding-right: 8px;
+}
+
+
+::ng-deep .campo .mdc-notched-outline__leading,
+::ng-deep .campo .mdc-notched-outline__notch,
+::ng-deep .campo .mdc-notched-outline__trailing {
+  border-color: #d1d5db !important;
+}
+
+::ng-deep .campo .mdc-notched-outline__leading {
+  border-radius: 4px 0 0 4px !important;
+}
+
+::ng-deep .campo .mdc-notched-outline__trailing {
+  border-radius: 0 4px 4px 0 !important;
+}
+
+::ng-deep .campo .mdc-notched-outline__notch {
+  border-radius: 0 !important;
+}
+
+
+::ng-deep .campo .mat-mdc-form-field:hover .mdc-notched-outline__leading,
+::ng-deep .campo .mat-mdc-form-field:hover .mdc-notched-outline__notch,
+::ng-deep .campo .mat-mdc-form-field:hover .mdc-notched-outline__trailing {
+  border-color: #94a3b8 !important;
+}
+
+::ng-deep .campo .mat-mdc-form-field.mat-focused .mdc-notched-outline__leading,
+::ng-deep .campo .mat-mdc-form-field.mat-focused .mdc-notched-outline__notch,
+::ng-deep .campo .mat-mdc-form-field.mat-focused .mdc-notched-outline__trailing {
+  border-color: #0078c8 !important;
+  border-width: 1px !important;
+}
+
+
+::ng-deep .campo .mat-mdc-form-field-subscript-wrapper {
+  display: none;
+}
+
+
+
+mat-dialog-actions {
+  min-height: 54px !important;
+  height: 54px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  padding: 0 24px !important;
+  margin: 0 !important;
+
+  gap: 8px;
+
+  border-top: 1px solid #e5e7eb;
+
+  font-family: Roboto, Arial, sans-serif;
+}
+
+
+.btn-registrar {
+  height: 36px;
+  min-width: 104px;
+
+  padding: 0 18px;
+
+  border: none;
+  border-radius: 2px;
+
+  background: #0078c8;
+  color: #ffffff;
+
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+
+  cursor: pointer;
+}
+
+.btn-registrar:hover {
+  background: #006db6;
+}
+
+
+.btn-cancelar {
+  height: 36px;
+  min-width: 92px;
+
+  padding: 0 18px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 2px;
+
+  background: #ffffff;
+  color: #64748b;
+
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+
+  cursor: pointer;
+}
+
+.btn-cancelar:hover {
+  background: #f8fafc;
+}
+
+
+@media (max-width: 600px) {
+
+  .fila {
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 14px;
+  }
+
+  mat-dialog-content {
+    padding: 20px !important;
+  }
+
+  mat-dialog-actions {
+    padding: 0 20px !important;
+  }
+}

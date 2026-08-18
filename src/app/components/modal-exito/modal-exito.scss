@@ -1,0 +1,78 @@
+:host {
+  display: block;
+}
+
+.modal-exito {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 28px 30px 24px;
+
+  text-align: center;
+
+  font-family: Roboto, Arial, sans-serif;
+}
+
+.icono-exito {
+  width: 46px;
+  height: 46px;
+
+  margin: 0 auto 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #e8f5e9;
+  color: #16a34a;
+}
+
+.icono-exito mat-icon {
+  width: 26px;
+  height: 26px;
+
+  font-size: 26px;
+}
+
+h2 {
+  margin: 0 0 8px;
+
+  font-size: 17px;
+  font-weight: 600;
+
+  color: #374151;
+}
+
+p {
+  margin: 0 0 22px;
+
+  font-size: 13px;
+  line-height: 18px;
+
+  color: #64748b;
+}
+
+.btn-aceptar {
+  height: 36px;
+  min-width: 90px;
+
+  padding: 0 18px;
+
+  border: none;
+  border-radius: 3px;
+
+  background: #0078c8;
+  color: #ffffff;
+
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+
+  cursor: pointer;
+}
+
+.btn-aceptar:hover {
+  background: #006db6;
+}

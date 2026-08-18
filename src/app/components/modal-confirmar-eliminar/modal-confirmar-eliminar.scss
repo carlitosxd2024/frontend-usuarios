@@ -1,0 +1,93 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+
+.contenido-confirmacion {
+  box-sizing: border-box;
+
+  padding: 26px 18px 16px !important;
+  margin: 0 !important;
+
+  overflow: visible !important;
+}
+
+.contenido-confirmacion p {
+  margin: 0;
+
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+
+  color: #374151;
+}
+
+
+
+mat-dialog-actions {
+  min-height: 48px !important;
+  height: 48px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  padding: 0 14px 12px !important;
+  margin: 0 !important;
+
+  gap: 8px;
+}
+
+
+
+.btn-aceptar {
+  height: 24px;
+  min-width: 65px;
+
+  padding: 0 14px;
+
+  border: none;
+  border-radius: 3px;
+
+  background: #1976d2;
+  color: #ffffff;
+
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+
+  cursor: pointer;
+}
+
+.btn-aceptar:hover {
+  background: #1565c0;
+}
+
+
+
+.btn-cancelar {
+  height: 24px;
+  min-width: 65px;
+
+  padding: 0 14px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 3px;
+
+  background: #ffffff;
+  color: #1976d2;
+
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+
+  cursor: pointer;
+}
+
+.btn-cancelar:hover {
+  background: #f8fafc;
+}

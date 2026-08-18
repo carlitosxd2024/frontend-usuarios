@@ -1,0 +1,72 @@
+<div class="contenedor">
+  <p class="breadcrumb">Módulo de Administración</p>
+  <h1>Administración de usuarios</h1>
+
+  <div class="filtros">
+    <mat-select placeholder="Seleccione un Departamento" [(ngModel)]="filtroDepartamento" (selectionChange)="aplicarFiltros()">
+      <mat-option [value]="null">Todos</mat-option>
+      @for (dep of departamentos; track dep.id) {
+        <mat-option [value]="dep.id">{{ dep.nombre }}</mat-option>
+      }
+    </mat-select>
+
+    <mat-select placeholder="Seleccione un Cargo" [(ngModel)]="filtroCargo" (selectionChange)="aplicarFiltros()">
+      <mat-option [value]="null">Todos</mat-option>
+      @for (car of cargos; track car.id) {
+        <mat-option [value]="car.id">{{ car.nombre }}</mat-option>
+      }
+    </mat-select>
+
+    <button mat-raised-button color="primary" (click)="abrirModalCrear()">Crear nuevo usuario</button>
+  </div>
+
+  <table mat-table [dataSource]="usuariosFiltrados" class="tabla">
+    <ng-container matColumnDef="usuario">
+      <th mat-header-cell *matHeaderCellDef>Usuario</th>
+      <td mat-cell *matCellDef="let u">{{ u.usuario }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="cedula">
+      <th mat-header-cell *matHeaderCellDef>Cédula</th>
+      <td mat-cell *matCellDef="let u">{{ u.cedula }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="nombres">
+      <th mat-header-cell *matHeaderCellDef>Nombres</th>
+      <td mat-cell *matCellDef="let u">{{ u.primerNombre }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="apellidos">
+      <th mat-header-cell *matHeaderCellDef>Apellidos</th>
+      <td mat-cell *matCellDef="let u">{{ u.primerApellido }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="departamento">
+      <th mat-header-cell *matHeaderCellDef>Departamento</th>
+      <td mat-cell *matCellDef="let u">{{ u.departamento?.nombre }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="cargo">
+      <th mat-header-cell *matHeaderCellDef>Cargo</th>
+      <td mat-cell *matCellDef="let u">{{ u.cargo?.nombre }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef>Email</th>
+      <td mat-cell *matCellDef="let u">{{ u.email }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="acciones">
+      <th mat-header-cell *matHeaderCellDef>Acciones</th>
+      <td mat-cell *matCellDef="let u">
+        <button mat-icon-button color="primary" (click)="abrirModalEditar(u)"><mat-icon>edit</mat-icon></button>
+        <button mat-icon-button color="warn" (click)="abrirModalEliminar(u)"><mat-icon>delete</mat-icon></button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columnas"></tr>
+    <tr mat-row *matRowDef="let row; columns: columnas;"></tr>
+  </table>
+
+  <p class="total">Total Registros: {{ usuariosFiltrados.length }}</p>
+</div>

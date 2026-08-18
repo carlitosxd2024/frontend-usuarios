@@ -1,0 +1,16 @@
+<div class="modal-informativo">
+  <div class="icono-advertencia">
+    <mat-icon>warning</mat-icon>
+  </div>
+
+  <h2>{{ data.titulo }}</h2>
+
+  <p>{{ data.mensaje }}</p>
+
+  <button
+    class="btn-aceptar"
+    type="button"
+    (click)="cerrar()">
+    Aceptar
+  </button>
+</div>

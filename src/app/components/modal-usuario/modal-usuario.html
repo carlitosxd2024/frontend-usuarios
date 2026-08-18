@@ -1,0 +1,163 @@
+<h2 mat-dialog-title>
+  <span>{{ modo === 'crear' ? 'Registrar usuario' : 'Editar usuario' }}</span>
+
+  <button
+    class="cerrar"
+    type="button"
+    (click)="cancelar()"
+    aria-label="Cerrar">
+    <mat-icon>close</mat-icon>
+  </button>
+</h2>
+
+<mat-dialog-content>
+  <form [formGroup]="usuarioForm" novalidate>
+    <!-- Departamento / Cargo -->
+    <div class="fila">
+      <div class="campo">
+        <label for="departamento">Departamento:</label>
+
+        <mat-form-field appearance="outline">
+          <mat-select
+            id="departamento"
+            formControlName="idDepartamento"
+            placeholder="Seleccione un Departamento">
+
+            @for (dep of departamentos; track dep.id) {
+              <mat-option [value]="dep.id">
+                {{ dep.nombre }}
+              </mat-option>
+            }
+
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="campo">
+        <label for="cargo">Cargo:</label>
+
+        <mat-form-field appearance="outline">
+          <mat-select
+            id="cargo"
+            formControlName="idCargo"
+            placeholder="Seleccione un perfil">
+
+            @for (car of cargos; track car.id) {
+              <mat-option [value]="car.id">
+                {{ car.nombre }}
+              </mat-option>
+            }
+
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <!-- Usuario / Cédula / Email -->
+    <div class="fila">
+      <div class="campo">
+        <label for="usuario">Usuario:</label>
+
+        <mat-form-field appearance="outline">
+          <input
+            id="usuario"
+            matInput
+            formControlName="usuario">
+        </mat-form-field>
+      </div>
+
+      <div class="campo">
+        <label for="cedula">Cédula:</label>
+
+        <mat-form-field appearance="outline">
+          <input
+            id="cedula"
+            matInput
+            formControlName="cedula">
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="fila">
+      <div class="campo">
+        <label for="email">Email:</label>
+
+        <mat-form-field appearance="outline">
+          <input
+            id="email"
+            matInput
+            type="email"
+            formControlName="email">
+        </mat-form-field>
+      </div>
+
+      <div class="campo"></div>
+    </div>
+
+    <!-- Primer Nombre / Segundo Nombre -->
+    <div class="fila">
+      <div class="campo">
+        <label for="primerNombre">Primer Nombre:</label>
+
+        <mat-form-field appearance="outline">
+          <input
+            id="primerNombre"
+            matInput
+            formControlName="primerNombre">
+        </mat-form-field>
+      </div>
+
+      <div class="campo">
+        <label for="segundoNombre">Segundo Nombre:</label>
+
+        <mat-form-field appearance="outline">
+          <input
+            id="segundoNombre"
+            matInput
+            formControlName="segundoNombre">
+        </mat-form-field>
+      </div>
+    </div>
+
+    <!-- Primer Apellido / Segundo Apellido -->
+    <div class="fila">
+      <div class="campo">
+        <label for="primerApellido">Primer Apellido:</label>
+
+        <mat-form-field appearance="outline">
+          <input
+            id="primerApellido"
+            matInput
+            formControlName="primerApellido">
+        </mat-form-field>
+      </div>
+
+      <div class="campo">
+        <label for="segundoApellido">Segundo Apellido:</label>
+
+        <mat-form-field appearance="outline">
+          <input
+            id="segundoApellido"
+            matInput
+            formControlName="segundoApellido">
+        </mat-form-field>
+      </div>
+    </div>
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button
+    class="btn-registrar"
+    type="button"
+    (click)="guardar()">
+    {{ modo === 'crear' ? 'Registrar' : 'Actualizar' }}
+  </button>
+
+  <button
+    class="btn-cancelar"
+    type="button"
+    (click)="cancelar()">
+    Cancelar
+  </button>
+</mat-dialog-actions>

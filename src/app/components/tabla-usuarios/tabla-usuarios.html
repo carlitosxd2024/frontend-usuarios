@@ -60,16 +60,16 @@
       <th mat-header-cell *matHeaderCellDef>Acciones</th>
       <td mat-cell *matCellDef="let u">
         <div class="accion">
-          <button mat-icon-button color="primary" aria-label="Editar usuario" (click)="abrirModalEditar(u)">
-            <mat-icon>edit</mat-icon>
+          <button mat-button class="boton-accion editar" aria-label="Editar usuario" (click)="abrirModalEditar(u)">
+            <mat-icon aria-hidden="true">edit</mat-icon>
+            <span>Editar</span>
           </button>
-          <span class="etiqueta editar">Editar</span>
         </div>
         <div class="accion">
-          <button mat-icon-button color="warn" aria-label="Eliminar usuario" (click)="abrirModalEliminar(u)">
-            <mat-icon>delete</mat-icon>
+          <button mat-button class="boton-accion eliminar" aria-label="Eliminar usuario" (click)="abrirModalEliminar(u)">
+            <mat-icon aria-hidden="true">delete</mat-icon>
+            <span>Eliminar</span>
           </button>
-          <span class="etiqueta eliminar">Eliminar</span>
         </div>
       </td>
     </ng-container>

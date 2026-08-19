@@ -78,6 +78,26 @@ h1 {
     background-color: #f9fafb;
   }
 
+  .accion {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    margin-right: 8px;
+  }
+
+  .etiqueta {
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  .etiqueta.editar {
+    color: #16a34a;
+  }
+
+  .etiqueta.eliminar {
+    color: #dc2626;
+  }
+
   button[color='primary'] mat-icon {
     color: #16a34a;
   }
